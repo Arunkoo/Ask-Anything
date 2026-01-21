@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const AskResultSchema = z.object({
-  summary: z.string().min(1).max(1000),
+  summary: z.string().min(1).max(250),
   confidence: z.number().min(0).max(1),
 });
 

@@ -3,7 +3,8 @@
 A full-stack application that converts raw text into **clear, structured summaries** using Large Language Models.  
 Designed with an emphasis on **reliable AI output**, clean UI, and maintainable architecture.
 
----
+<img src="ASK%20ANYTHING.png" alt="App preview" width="850" />
+
 
 ## Overview
 
@@ -11,13 +12,13 @@ The app allows users to enter text and receive a short, beginner-friendly summar
 
 Unlike typical LLM demos, this project focuses on **predictability** — both in backend responses and frontend consumption.
 
----
+
 
 ## Live Demo
 
 🔗 **Deployed App:** https://ask-anything-theta.vercel.app/  
 
----
+
 
 ## What it does
 
@@ -26,7 +27,7 @@ Unlike typical LLM demos, this project focuses on **predictability** — both in
 - Validates and enforces structured responses
 - Displays results with a clean, minimal interface
 
----
+
 
 ## Tech Stack
 
@@ -43,7 +44,7 @@ Unlike typical LLM demos, this project focuses on **predictability** — both in
 - **Zod (schema validation)**
 - **OpenAI / Gemini / Groq**
 
----
+
 
 ## Example Output
 

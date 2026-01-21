@@ -41,12 +41,22 @@ export default function Home() {
         );
       }
 
-      const { summary, confidence } = data.response as {
-        summary: string;
-        confidence: number;
-      };
+      if (!data?.response) {
+        throw new Error(
+          data?.error || data?.message || "Invalid backend response",
+        );
+      }
 
-      setAnswers((prev) => [{ summary, confidence }, ...prev]);
+      const summary = data?.response?.summary;
+      const confidence = data?.response?.confidence;
+
+      if (!summary) {
+        console.error("Bad response shape:", data);
+        throw new Error("No answer returned from server");
+      }
+
+      setAnswers((prev) => [{ summary, confidence: confidence ?? 0 }, ...prev]);
+
       setQuery("");
       inputRef.current?.focus();
 

@@ -23,6 +23,8 @@ app.post("/ask", async (req, res) => {
     const { query } = req.body ?? {};
     if (!query || !String(query).trim()) {
       return res.status(400).json({
+        success: false,
+        response: null,
         error: "No query detected",
       });
     }
@@ -35,7 +37,9 @@ app.post("/ask", async (req, res) => {
     });
   } catch (err: any) {
     return res.status(500).json({
-      message: "Failed to answer",
+      success: false,
+      response: null,
+      error: "Failed to answer",
     });
   }
 });
